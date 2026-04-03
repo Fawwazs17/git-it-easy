@@ -1,0 +1,209 @@
+/* =============================================
+   Git It Good Innit — Kingsman Theme
+   These styles are fine — focus on the HTML!
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gold: #c5a355;
+  --gold-light: #d4b96e;
+  --gold-dark: #a8892e;
+  --navy: #1a2744;
+  --navy-deep: #0f1a2e;
+  --navy-light: #253658;
+  --cream: #f5f0e8;
+  --cream-dark: #e8e0d0;
+  --text: #1a1a1a;
+  --text-muted: #5c5347;
+  --card-bg: #fffdf8;
+  --border: #d4c9b5;
+  --radius: 8px;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Navigation */
+header {
+  background: var(--navy-deep);
+  border-bottom: 2px solid var(--gold);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--gold-light);
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-light) 100%);
+  color: var(--cream);
+  padding: 6rem 2rem;
+  text-align: center;
+  border-bottom: 3px solid var(--gold);
+  position: relative;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(197, 163, 85, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--navy);
+  border-bottom: 3px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* About */
+.about-text p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+/* Projects */
+#projects {
+  background: var(--cream-dark);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  border-top: 3px solid var(--gold);
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 24px rgba(26, 39, 68, 0.1);
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
+
+.project-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Contact */
+#contact {
+  text-align: center;
+}
+
+#contact a {
+  color: var(--gold-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#contact a:hover {
+  color: var(--navy);
+}
+
+/* Footer */
+footer {
+  background: var(--navy-deep);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--gold);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 1.2rem;
+  }
+}
